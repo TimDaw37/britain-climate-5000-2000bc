@@ -23,9 +23,24 @@ All series plotted on this site were downloaded from public palaeoclimate archiv
 6. Steinhilber, F., Beer, J. and Fröhlich, C. (2009). Total solar irradiance during the Holocene. *Geophysical Research Letters* 36, L19704. https://doi.org/10.1029/2009GL040142  
    Data: NOAA WDS Paleoclimatology https://doi.org/10.25921/hp22-h866
 
+7. Mauri, A., Davis, B.A.S., Collins, P.M. and Kaplan, J.O. (2015). The climate of Europe during the Holocene: a gridded pollen-based reconstruction and its multi-proxy evaluation. *Quaternary Science Reviews* 112, 109–127. https://doi.org/10.1016/j.quascirev.2015.01.013  
+   Data: NOAA WDS Paleoclimatology study 18317, EPOCH-2 GeoTIFFs at 51°N, 2°W. https://doi.org/10.25921/gkkq-b461  
+   Used for the Stonehenge headline. Anomalies added to Boscombe Down 1971–2000 means (Met Office). Annual precipitation GeoTIFF not used; seasonal mm day⁻¹ fields only.
+
+8. Langdon, P.G., Barber, K.E. and Lomas-Clarke, S.H. (2004). Reconstructing climate and environmental change in northern England through chironomid and pollen analyses: evidence from Talkin Tarn, Cumbria. *Journal of Paleolimnology* 32, 197–213. https://doi.org/10.1023/B:JOPL.0000029433.85764.a5  
+   Data: Temperature 12k / NOAA TalkinTarn.Langdon.2004
+
+9. Barber, K., Brown, A., Langdon, P. and Hughes, P. (2013). Comparing and cross-validating lake and bog palaeoclimatic records. *Journal of Paleolimnology* 49, 561–575. https://doi.org/10.1007/s10933-012-9656-8  
+   Data: Temperature 12k / NOAA BiglandTarn.Barber.2013
+
+10. Taylor, K.J., McGinley, S., Potito, A.P., Molloy, K. and Beilman, D.W. (2018). A mid to late Holocene chironomid-inferred temperature record from northwest Ireland. *Palaeogeography, Palaeoclimatology, Palaeoecology* 505, 274–286. https://doi.org/10.1016/j.palaeo.2018.06.006  
+   Data: Temperature 12k / NOAA LoughMeenachrinna.Taylor.2018
+
+11. Leuschner, H.H., Sass-Klaassen, U., Jansma, E., Baillie, M.G.L. and Spurk, M. (2002). Subfossil European bog oaks: population dynamics and long-term growth depressions. *The Holocene* 12, 695–706. https://doi.org/10.1191/0959683602hl584rp  
+    Events only (no public annual-count file): generation changes ~4000, ~2500 and ~2000 BC.
+
 ## Discussed, not plotted
 
-- Mauri, A., Davis, B.A.S., Collins, P.M. and Kaplan, J.O. (2015). The climate of Europe during the Holocene. *Quaternary Science Reviews* 112, 109–127. https://doi.org/10.1016/j.quascirev.2015.01.013
 - Kaufman, D. et al. (2020). A global database of Holocene paleotemperature records. *Scientific Data* 7, 115. https://doi.org/10.1038/s41597-020-0445-3
 - Roland, T.P. et al. (2014). Was there a ‘4.2 ka event’ in Great Britain and Ireland? *Quaternary Science Reviews* 83, 11–27. https://doi.org/10.1016/j.quascirev.2013.10.024
 - Charman, D.J. (2010). Centennial climate variability in the British Isles during the mid–late Holocene. *Quaternary Science Reviews* 29, 1539–1554. https://doi.org/10.1016/j.quascirev.2009.02.017
