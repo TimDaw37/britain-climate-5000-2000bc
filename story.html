@@ -103,15 +103,24 @@
       border-bottom: 1px solid var(--rule);
     }
     figure.still img {
-      display: block; width: 100%; height: min(42vh, 28rem);
-      object-fit: cover; object-position: 50% 62%;
+      display: block; width: 100%; height: min(62vh, 40rem);
+      object-fit: cover; object-position: 50% 46%;
     }
     figure.still figcaption {
       font-family: "Source Sans 3", sans-serif;
       font-size: .78rem; color: var(--muted);
       padding: .7rem 5vw 1rem;
     }
-    .wrap { padding: 2.2rem 5vw 3.5rem; max-width: 42rem; }
+    .wrap {
+      padding: 2.4rem 5vw 4rem;
+      max-width: 92rem;
+      margin: 0 auto;
+    }
+    .pair {
+      display: grid;
+      gap: 1.4rem;
+      margin: 0 0 2.2rem;
+    }
     .note {
       font-size: .95rem; color: var(--muted); margin: 0 0 2rem;
     }
@@ -123,9 +132,11 @@
     .gold {
       background: var(--stone-2);
       border-left: 3px solid var(--brass);
-      padding: 1.4rem 1.25rem 1.25rem;
-      margin: 0 0 2.2rem;
+      padding: 1.4rem 1.4rem 1.25rem;
+      margin: 0;
     }
+    .slices { min-width: 0; }
+    .slices h2 { margin-top: 0; }
     .gold h2 {
       font-family: "Source Sans 3", sans-serif;
       font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
@@ -176,6 +187,11 @@
     }
     .cards h3 { font-size: 1.05rem; margin: 0 0 .4rem; font-weight: 600; }
     .cards p { font-size: 1rem; margin: 0; color: #d8d0c0; }
+    .what {
+      display: grid;
+      gap: 0 2.5rem;
+      margin: 0 0 1.6rem;
+    }
     .cta {
       display: flex; flex-wrap: wrap; gap: .85rem 1.2rem;
       align-items: center; margin: 1.8rem 0 0;
@@ -192,9 +208,12 @@
       padding: 1.5rem 5vw 2.6rem;
       font-family: "Source Sans 3", sans-serif;
       font-size: .82rem; color: var(--muted); line-height: 1.55;
-      max-width: 46rem;
     }
-    footer p { margin: 0 0 .65rem; }
+    .cites {
+      max-width: 92rem; margin: 0 auto;
+      display: grid; gap: .35rem 2.5rem;
+    }
+    footer p { margin: 0 0 .45rem; }
     footer a { color: var(--lichen); }
     @media (min-width: 720px) {
       .kpis { grid-template-columns: repeat(4, 1fr); }
@@ -203,13 +222,34 @@
       .kpis article:nth-child(even) { padding: 1.2rem 1.15rem 1.3rem; }
       .kpis article:first-child { padding-left: 5vw; }
       .kpis article:last-child { padding-right: 5vw; }
-      .hero { padding: 7.5vh 5vw 2.4rem; }
+      .hero { padding: 7.5vh 5vw 2.4rem; max-width: 58rem; }
       .cards { grid-template-columns: 1fr 1fr 1fr; }
       .time li {
         grid-template-columns: 9.4rem 1fr;
         gap: 1.1rem; align-items: baseline;
       }
-      figure.still img { height: min(46vh, 32rem); }
+      figure.still img { height: min(64vh, 42rem); }
+      .cites { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 960px) {
+      .pair { grid-template-columns: 1fr 1fr; gap: 1.6rem 2.2rem; align-items: start; }
+      table { min-width: 0; }
+      .time {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        border-top: 1px solid var(--rule);
+      }
+      .time li {
+        display: block;
+        grid-template-columns: none;
+        padding: 1rem 1.3rem 1.15rem 0;
+        border-bottom: none;
+        border-right: 1px solid var(--rule);
+      }
+      .time li:last-child { border-right: none; padding-right: 0; }
+      .time li:not(:first-child) { padding-left: 1.3rem; }
+      .what { grid-template-columns: 1fr 1fr; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -261,8 +301,8 @@
     </div>
 
     <figure class="still">
-      <img src="stonehenge.jpg" width="1920" height="1080" alt="Stonehenge on an overcast day: grey sarsen trilithons on short grassland, no mist." />
-      <figcaption>Holocene climate, not ice-sheet geology. The picture is the monument; the argument is the winters.</figcaption>
+      <img src="stonehenge.jpg" width="1080" height="647" alt="Stonehenge in snow, winter 2013: the sarsen circle on a white Plain under a grey sky." />
+      <figcaption>Stonehenge, winter 2013. Photograph: Tim Daw. Lying snow on the downs is the smaller claim. It is not a metre of ice on the Avon.</figcaption>
     </figure>
 
     <div class="wrap">
@@ -275,56 +315,60 @@
         <a href="https://timdaw37.github.io/britain-climate-5000-2000bc/">See the proxies.</a>
       </p>
 
-      <div class="gold">
-        <h2>Gold’s formula, on the Avon</h2>
-        <p class="eq">P = A h² &nbsp;→&nbsp; 40 t, river ice &nbsp;<b>107 cm</b></p>
-        <p>
-          Canadian ice-road practice (Gold 1971): load in kilograms, thickness of good
-          clear floating ice in centimetres. A ≈ 3.5 on a river, 4 on a typical lake.
-          A metre of ice wants on the order of 4,000–5,000 freezing-degree-days.
-          A Wessex January whose millennial mean is about 3 °C does not supply that.
-          Lying snow on the downs (Hill 1961) is a different, smaller claim — sledging
-          on snow on land, not a frozen river as a road.
-        </p>
-        <div class="table-scroll">
-        <table>
-          <thead>
-            <tr><th>Load</th><th>A</th><th>Ice</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>20 t sarsen</td><td>3.5</td><td>76 cm</td></tr>
-            <tr><td>40 t sarsen</td><td>3.5</td><td>107 cm</td></tr>
-            <tr><td>40 t</td><td>4</td><td>100 cm</td></tr>
-            <tr><td>50 t</td><td>3.5</td><td>120 cm</td></tr>
-          </tbody>
-        </table>
+      <div class="pair">
+        <div class="gold">
+          <h2>Gold’s formula, on the Avon</h2>
+          <p class="eq">P = A h² &nbsp;→&nbsp; 40 t, river ice &nbsp;<b>107 cm</b></p>
+          <p>
+            Canadian ice-road practice (Gold 1971): load in kilograms, thickness of good
+            clear floating ice in centimetres. A ≈ 3.5 on a river, 4 on a typical lake.
+            A metre of ice wants on the order of 4,000–5,000 freezing-degree-days.
+            A Wessex January whose millennial mean is about 3 °C does not supply that.
+            Lying snow on the downs (Hill 1961) is a different, smaller claim — sledging
+            on snow on land, not a frozen river as a road.
+          </p>
+          <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th>Load</th><th>A</th><th>Ice</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>20 t sarsen</td><td>3.5</td><td>76 cm</td></tr>
+              <tr><td>40 t sarsen</td><td>3.5</td><td>107 cm</td></tr>
+              <tr><td>40 t</td><td>4</td><td>100 cm</td></tr>
+              <tr><td>50 t</td><td>3.5</td><td>120 cm</td></tr>
+            </tbody>
+          </table>
+          </div>
         </div>
-      </div>
 
-      <h2>Four millennial slices, not a diary</h2>
-      <p>
-        Central values only. Boscombe Down 1971–2000 baseline: annual 9.85 °C,
-        January 4.0 °C, July 16.75 °C, rain 736 mm. Today (1991–2020): 10.4 °C,
-        4.6 °C, 17.1 °C, 783 mm.
-      </p>
-      <div class="table-scroll">
-      <table>
-        <thead>
-          <tr>
-            <th>Slice</th>
-            <th>Annual °C</th>
-            <th>July °C</th>
-            <th>January °C</th>
-            <th>Rain mm</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>5050 BC</td><td>9.6</td><td>17.4</td><td>2.7</td><td>731</td></tr>
-          <tr><td>4050 BC</td><td>10.1</td><td>16.7</td><td>4.2</td><td>816</td></tr>
-          <tr><td>3050 BC</td><td>9.6</td><td>16.7</td><td>3.8</td><td>873</td></tr>
-          <tr><td>2050 BC</td><td>9.6</td><td>16.5</td><td>4.0</td><td>838</td></tr>
-        </tbody>
-      </table>
+        <div class="slices">
+          <h2>Four millennial slices, not a diary</h2>
+          <p>
+            Central values only. Boscombe Down 1971–2000 baseline: annual 9.85 °C,
+            January 4.0 °C, July 16.75 °C, rain 736 mm. Today (1991–2020): 10.4 °C,
+            4.6 °C, 17.1 °C, 783 mm.
+          </p>
+          <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Slice</th>
+                <th>Annual °C</th>
+                <th>July °C</th>
+                <th>January °C</th>
+                <th>Rain mm</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>5050 BC</td><td>9.6</td><td>17.4</td><td>2.7</td><td>731</td></tr>
+              <tr><td>4050 BC</td><td>10.1</td><td>16.7</td><td>4.2</td><td>816</td></tr>
+              <tr><td>3050 BC</td><td>9.6</td><td>16.7</td><td>3.8</td><td>873</td></tr>
+              <tr><td>2050 BC</td><td>9.6</td><td>16.5</td><td>4.0</td><td>838</td></tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
       </div>
 
       <h2>The dates do not make a single story</h2>
@@ -364,6 +408,7 @@
       </div>
 
       <h2>What they are</h2>
+      <div class="what">
       <p>
         Moisture more than temperature. Millennial slices, not weather.
         Uncertainty is the point: pollen transfer functions are coarse; after about
@@ -377,6 +422,7 @@
         Replacement is genetic fact. A British climate catastrophe that explains it
         is not in these series.
       </p>
+      </div>
 
       <div class="cta">
         <a class="btn" href="https://timdaw37.github.io/britain-climate-5000-2000bc/">Full explorer, sources, series notes</a>
@@ -387,12 +433,14 @@
   </main>
 
   <footer>
-    <p>Mauri et al. (2015), <em>Quaternary Science Reviews</em> 112, 109–127 — EPOCH-2 pollen-grid anomalies, 1° cell near 51°N, 2°W.</p>
-    <p>Boscombe Down 1971–2000 and 1991–2020 means, Met Office — the pollen-era normal and today’s comparison.</p>
-    <p>Gold, L.W. (1971), <em>Canadian Geotechnical Journal</em> 8, 170–181 — ice-road formula P = A h².</p>
-    <p>Hill (1961) — sledging on snow on land; a different, smaller claim than a frozen Avon.</p>
-    <p>Roland et al. (2014), <em>Quaternary Science Reviews</em> 83, 11–27 — no coherent 4.2 ka peat event in Britain and Ireland.</p>
-    <p>Viewer by Daw / Grok, 2026. This page argues; <a href="https://timdaw37.github.io/britain-climate-5000-2000bc/">the explorer</a> shows the series.</p>
+    <div class="cites">
+      <p>Mauri et al. (2015), <em>Quaternary Science Reviews</em> 112, 109–127 — EPOCH-2 pollen-grid anomalies, 1° cell near 51°N, 2°W.</p>
+      <p>Boscombe Down 1971–2000 and 1991–2020 means, Met Office — the pollen-era normal and today’s comparison.</p>
+      <p>Gold, L.W. (1971), <em>Canadian Geotechnical Journal</em> 8, 170–181 — ice-road formula P = A h².</p>
+      <p>Hill (1961) — sledging on snow on land; a different, smaller claim than a frozen Avon.</p>
+      <p>Roland et al. (2014), <em>Quaternary Science Reviews</em> 83, 11–27 — no coherent 4.2 ka peat event in Britain and Ireland.</p>
+      <p>Photograph: Tim Daw, Stonehenge in snow, winter 2013. Viewer by Daw / Grok, 2026. This page argues; <a href="https://timdaw37.github.io/britain-climate-5000-2000bc/">the explorer</a> shows the series.</p>
+    </div>
   </footer>
 </body>
 </html>
