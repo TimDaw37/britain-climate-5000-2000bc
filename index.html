@@ -70,6 +70,11 @@ window.CLIMATE_DATA={"meta":{"title":"Climate of Britain, 5000–2000 BC","subti
     .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 1.1rem 1.2rem; }
     .card h3 { margin: 0 0 .35rem; font-size: 1.05rem; }
     .card p, .card li { color: var(--muted); }
+        .band-key { display:grid; grid-template-columns:1fr; gap:.35rem .8rem; margin: .7rem 0 1rem; font-size:.88rem; color:var(--muted); }
+    .band-key div { display:flex; gap:.55rem; align-items:flex-start; }
+    .band-key i { flex:0 0 1.15rem; height:1.15rem; border-radius:3px; border:1px solid var(--line); margin-top:.15rem; }
+    .band-key b { color:var(--ink); font-weight:600; margin-right:.35rem; }
+    @media (min-width: 800px) { .band-key { grid-template-columns:1fr 1fr; } }
     .tag { display: inline-block; font-family: system-ui, sans-serif; font-size: .72rem; letter-spacing: .03em; text-transform: uppercase; border: 1px solid var(--line); padding: .1rem .4rem; border-radius: 4px; margin-right: .3rem; color: var(--accent); }
     details.cite { margin-top: .6rem; }
     details.cite summary { cursor: pointer; color: var(--accent); font-size: .9rem; }
@@ -99,7 +104,7 @@ Britain had been ice-free for millennia before this window. Whether Pleistocene 
       <span class="pill">Window: 5000–2000 BC ≈ 6950–3950 cal yr BP</span>
       <span class="pill">BP datum: years before 1950</span>
       <span class="pill">Data accessed 12 Sep 2026</span>
-      <span class="pill">v0.9 — Macklin episodes as published bands</span>
+      <span class="pill">v0.10 — vertical-band key</span>
       <a class="pill" href="story.html" style="text-decoration:none">The argument →</a>
     </div>
   </header>
@@ -154,8 +159,17 @@ Britain had been ice-free for millennia before this window. Whether Pleistocene 
     <section id="overview">
       <div class="card">
         <h3>How to read these graphs</h3>
-        <p>Time runs from older (left) to younger (right) in years BC. The gold band is the study window. Blue bands are published wet shifts or cool-ocean intervals. The hatched band is the 4.2 ka episode, which is <strong>debated</strong> in Britain.</p>
-        <p>Different panels measure different things. Do not mentally convert a wet bog into a cold winter, or a Greenland ice-core wiggle into snow on Salisbury Plain. Hover a line for values; click legend items to hide a series.</p>
+        <p>Time runs older → younger, left to right, in years BC. The <em>lines</em> are measurements. The <em>vertical washes</em> are not. They are published time-windows other people have named — climate events, wet shifts, flood-phase compilations, dating spans. A coloured block does not mean the lines inside it jumped. Use the toggles under this card to switch each family on or off.</p>
+        <div class="band-key">
+          <div><i style="background:rgba(212,160,86,0.45)"></i><b>Gold wash</b> Study window 5000–2000 BC. Always on.</div>
+          <div><i style="background:rgba(138,160,200,0.7)"></i><b>Steel blue</b> 8.2 ka context (6400–6000 BC). Before the window. Britain already ice-free.</div>
+          <div><i style="background:rgba(201,132,90,0.7)"></i><b>Terracotta</b> Debated 4.2 ka interval (2300–2000 BC). Roland et al. 2014 found no coherent British peat event.</div>
+          <div><i style="background:rgba(106,166,200,0.65)"></i><b>Cyan</b> Published peat wet shift ~2450–2050 BC (Charman/Barber/Hughes literature).</div>
+          <div><i style="background:rgba(143,186,122,0.7)"></i><b>Green</b> Irish/continental bog-oak generation changes (~4000 and ~2500 BC).</div>
+          <div><i style="background:rgba(212,160,86,0.7)"></i><b>Amber</b> Fenland yew span 2668–2213 BC (calendar lock) and the earlier Fenland wetting note.</div>
+          <div><i style="background:rgba(168,130,196,0.75)"></i><b>Violet</b> Macklin/Lewin UK fluvial flood-phase episodes (national <sup>14</sup>C CPDF, not the Avon).</div>
+        </div>
+        <p>Hover a line for values. Click a legend item to hide a series. Do not convert a wet bog into a frozen river.</p>
       </div>
     </section>
 
@@ -169,6 +183,7 @@ Britain had been ice-free for millennia before this window. Whether Pleistocene 
         <label><input type="checkbox" id="showMacklin" checked /> Macklin/Lewin UK flood phases</label>
         <label><input type="checkbox" id="wide" /> Wider axis (6200–1500 BC)</label>
       </div>
+      <p class="note" style="margin:.2rem 0 .9rem">Vertical colour blocks are named time-windows (see the key above), not spikes in the data. Turn each family off with the boxes.</p>
       <div class="chart">
         <h2>1. British and Irish hydroclimate</h2>
         <p class="note">Peat water tables record summer effective precipitation. Higher Charman 2006 σ ≈ wetter. Charman 2000 is plotted inverted so upward is also wetter. Thorne Moors oak and Fenland yew ring widths are site hydrology / vitality, not rainfall mm. Fenland yew δ18O and Lancaster Hole cave δ18O are the two public British isotope series through this window. Macklin/Lewin UK flood-phase bands (toggle) are national 14C CPDFs, not an Avon hydrograph. The 2006 national peat stack only begins near 2493 BC. The first swing is poorly constrained (few cores) and sits on a known ~2500 BC wet shift also recorded as an Irish/continental bog-oak generation change — it is not a separate Irish peat curve.</p>
@@ -259,7 +274,7 @@ Britain had been ice-free for millennia before this window. Whether Pleistocene 
       <div class="card">
         <h3>How to cite</h3>
         <p>Cite the original papers and NOAA archives for any series you reuse. This site is a viewer, not a new reconstruction.</p>
-        <p>Suggested site citation: Daw / Grok (2026), <em>Climate of Britain, 5000–2000 BC: referenced proxy explorer</em>, v0.9. GitHub Pages.</p>
+        <p>Suggested site citation: Daw / Grok (2026), <em>Climate of Britain, 5000–2000 BC: referenced proxy explorer</em>, v0.10. GitHub Pages.</p>
         <p>Raw files used here were downloaded from NOAA WDS Paleoclimatology on 12 September 2026. See <code>CITATIONS.md</code> in the repository.</p>
       </div>
     </section>
@@ -351,7 +366,7 @@ Britain had been ice-free for millennia before this window. Whether Pleistocene 
           out.push({
             type: "rect", xref: "x", yref: "paper",
             x0: e.start_bc, x1: e.end_bc, y0: 0, y1: 1,
-            fillcolor: "rgba(106,166,200,0.10)",
+            fillcolor: "rgba(168,130,196,0.16)",
             line: { width: 0 }
           });
         });
