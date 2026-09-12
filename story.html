@@ -1,486 +1,197 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The climate at Stonehenge, 5000–2000 BC</title>
-  <meta name="description" content="Mid-Holocene Wessex was a maritime temperate climate like now: a growing season, not a frozen Avon, not a famine that explains Beaker replacement." />
+  <meta name="description" content="Mid-Holocene Wessex was a maritime temperate climate like now. Not a frozen Avon, and not a crash timed to explain the Beakers." />
   <link rel="canonical" href="https://timdaw37.github.io/britain-climate-5000-2000bc/story.html" />
-  <meta name="theme-color" content="#141210" />
-  <meta property="og:title" content="The climate at Stonehenge, 5000–2000 BC" />
-  <meta property="og:description" content="A working year, like now. Not a frozen Avon, not a harvest collapse, not a crash timed to the Beakers." />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://timdaw37.github.io/britain-climate-5000-2000bc/story.html" />
-  <meta property="og:image" content="https://timdaw37.github.io/britain-climate-5000-2000bc/stonehenge.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --stone: #141210;
-      --stone-2: #1c1915;
-      --stone-3: #25211b;
-      --rule: #3a342c;
-      --paper: #ece4d4;
-      --muted: #9a9080;
-      --lichen: #8faf88;
-      --lichen-dim: #6e8c68;
-      --brass: #c9a35a;
+      --ink: #14120f;
+      --paper: #efe6d4;
+      --paper2: #e4d8c2;
+      --brass: #b8893a;
+      --moss: #3d5a45;
+      --rule: #c9b99a;
+      --muted: #6b614f;
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
     body {
-      font: 400 1.125rem/1.5 "Source Serif 4", "Iowan Old Style", Georgia, serif;
-      background: var(--stone);
-      color: var(--paper);
+      font: 20px/1.5 "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
+      background: var(--paper);
+      color: var(--ink);
     }
-    a { color: var(--lichen); text-underline-offset: .18em; }
-    a:hover { color: var(--paper); }
-    a:focus-visible {
-      outline: 2px solid var(--brass);
-      outline-offset: 3px;
-    }
-    .skip {
-      position: absolute; left: .8rem; top: -3rem;
-      background: var(--brass); color: var(--stone);
-      padding: .4rem .7rem; text-decoration: none; font-family: "Source Sans 3", sans-serif;
-    }
-    .skip:focus { top: .8rem; }
+    a { color: var(--moss); }
+    a:hover { color: var(--ink); }
     header {
+      padding: 1.1rem 6vw 0;
       display: flex; justify-content: space-between; gap: 1rem;
-      align-items: baseline;
-      padding: 1rem 5vw;
-      font-family: "Source Sans 3", sans-serif;
-      font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
-      color: var(--muted);
-      border-bottom: 1px solid var(--rule);
+      align-items: baseline; font-size: .78rem; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--muted);
     }
-    header a { color: var(--lichen); text-decoration: none; border-bottom: 1px solid var(--lichen-dim); }
-    header a:hover { color: var(--paper); border-bottom-color: var(--paper); }
-    .hero {
-      padding: 8vw 5vw 2.2rem;
-      max-width: 92rem;
-      margin: 0 auto;
-    }
-    .kicker {
-      font-family: "Source Sans 3", sans-serif;
-      font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+    header a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
+    .hero { padding: 8vh 6vw 4vh; max-width: 58rem; }
+    .hero p.kicker {
+      font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
       color: var(--brass); margin: 0 0 1rem;
     }
     h1 {
-      font-size: clamp(2.2rem, 5.4vw, 5.1rem);
-      line-height: 1.05; font-weight: 600; margin: 0 0 1.3rem;
-      letter-spacing: -.03em;
-      max-width: none;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      line-height: 1.12; font-weight: 600; margin: 0 0 1.2rem;
+      letter-spacing: -.02em;
     }
-    .lede {
-      font-size: 1.12rem; max-width: none; color: #d8d0c0; margin: 0 0 1rem;
-    }
-    .see {
-      font-family: "Source Sans 3", sans-serif;
-      font-size: .95rem;
-      margin: 0;
+    .hero .stand {
+      font-size: 1.15rem; max-width: 42rem; color: #3a3428;
     }
     .kpis {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--rule);
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--rule);
+      border: 1px solid var(--rule);
+      margin: 2.4rem 6vw 0;
     }
-    .kpis article {
-      background: var(--stone);
-      padding: 1.15rem 1.1rem 1.25rem;
-    }
-    .kpis article:nth-child(odd) { padding-left: 5vw; }
-    .kpis article:nth-child(even) { padding-right: 5vw; }
-    .kpis span {
-      display: block;
-      font-family: "Source Sans 3", sans-serif;
-      font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
-      color: var(--muted);
-    }
-    .kpis b {
-      display: block; font-size: clamp(1.35rem, 4vw, 1.85rem);
-      font-weight: 600; margin: .28rem 0 .12rem; letter-spacing: -.02em;
-    }
-    .kpis i { font-style: normal; font-size: .88rem; color: var(--muted); }
-    figure.still {
-      margin: 0;
-      border-bottom: 1px solid var(--rule);
-    }
-    figure.still img {
-      display: block; width: 100%; height: min(62vh, 40rem);
-      object-fit: cover; object-position: 50% 40%;
-    }
-    figure.still figcaption {
-      font-family: "Source Sans 3", sans-serif;
-      font-size: .78rem; color: var(--muted);
-      padding: .7rem 5vw 1rem;
-    }
-    .wrap {
-      padding: 2.4rem 5vw 4rem;
-      max-width: 92rem;
-      margin: 0 auto;
-    }
-    .pair {
-      display: grid;
-      gap: 1.4rem;
-      margin: 0 0 2.2rem;
-    }
-    .note {
-      font-size: .95rem; color: var(--muted); margin: 0 0 2rem;
-    }
-    h2 {
-      font-size: 1.45rem; font-weight: 600;
-      letter-spacing: -.015em; margin: 2.4rem 0 .7rem;
-    }
+    .kpis div { background: var(--paper); padding: 1.1rem 1.2rem 1.2rem; }
+    .kpis span { display: block; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .kpis b { display: block; font-size: 1.55rem; margin: .25rem 0 .15rem; letter-spacing: -.02em; }
+    .kpis i { font-style: normal; font-size: .85rem; color: var(--muted); }
+    .wrap { padding: 3rem 6vw 5rem; max-width: 58rem; }
+    h2 { font-size: 1.45rem; margin: 2.6rem 0 .7rem; }
     p { margin: 0 0 1rem; }
     .gold {
-      background: var(--stone-2);
-      border-left: 3px solid var(--brass);
-      padding: 1.4rem 1.4rem 1.25rem;
-      margin: 0;
+      background: var(--ink); color: var(--paper);
+      padding: 1.6rem 1.5rem 1.4rem; margin: 1.6rem 0 2rem;
     }
-    .slices { min-width: 0; }
-    .slices h2 { margin-top: 0; }
-    .gold h2 {
-      font-family: "Source Sans 3", sans-serif;
-      font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--brass); margin: 0 0 .85rem; font-weight: 600;
-    }
-    .eq {
-      font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
-      font-size: 1.15rem; color: var(--paper); margin: 0 0 .9rem;
-    }
-    .eq b { color: var(--brass); font-weight: 600; }
-    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    table {
-      width: 100%; border-collapse: collapse;
-      font-size: .92rem; margin: 1rem 0 1.2rem;
-      min-width: 28rem;
-    }
-    .gold table { min-width: 16rem; }
-    th, td {
-      text-align: left; padding: .42rem 0;
-      border-bottom: 1px solid var(--rule);
-      font-variant-numeric: tabular-nums;
-    }
-    th {
-      font-family: "Source Sans 3", sans-serif;
-      font-size: .68rem; letter-spacing: .08em; text-transform: uppercase;
-      color: var(--muted); font-weight: 600;
-    }
-    td:last-child, th:last-child { text-align: right; }
-    .time {
-      list-style: none; padding: 0; margin: 1rem 0 2.2rem;
-      border-top: 1px solid var(--rule);
-    }
-    .time li {
-      display: grid; gap: .2rem;
-      padding: .85rem 0 .9rem;
-      border-bottom: 1px solid var(--rule);
-    }
-    .time strong {
-      font-family: "Source Sans 3", sans-serif;
-      font-size: .82rem; letter-spacing: .06em;
-      font-variant-numeric: tabular-nums;
-      color: var(--brass); font-weight: 600;
-    }
-    .cards { display: grid; gap: .7rem; margin: 1rem 0 2rem; }
-    .cards article {
-      background: var(--stone-3);
-      padding: 1.05rem 1.05rem 1.15rem;
-    }
-    .cards h3 { font-size: 1.05rem; margin: 0 0 .4rem; font-weight: 600; }
-    .cards p { font-size: 1rem; margin: 0; color: #d8d0c0; }
-    .what {
-      display: grid;
-      gap: .7rem;
-      margin: 1rem 0 2rem;
-    }
+    .gold h2 { color: var(--brass); margin-top: 0; font-size: 1.05rem; letter-spacing: .08em; text-transform: uppercase; }
+    .gold p { color: #e8dcc6; }
+    .gold .eq { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 1.05rem; color: #fff; margin: .4rem 0 1rem; }
+    .time { list-style: none; padding: 0; margin: 1rem 0 2rem; }
+    .time li { display: grid; grid-template-columns: 9.2rem 1fr; gap: 1rem; padding: .8rem 0; border-top: 1px solid var(--rule); }
+    .time strong { font-variant-numeric: tabular-nums; }
+    .cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .8rem; margin: 1.2rem 0 2rem; }
+    .cards article { background: var(--paper2); padding: 1rem 1rem 1.1rem; }
+    .cards h3 { font-size: 1.02rem; margin: 0 0 .4rem; }
+    .cards p { font-size: .93rem; margin: 0; }
     .cta {
-      display: flex; flex-wrap: wrap; gap: .85rem 1.2rem;
-      align-items: center; margin: 1.8rem 0 0;
-      font-family: "Source Sans 3", sans-serif;
+      display: flex; flex-wrap: wrap; gap: .8rem; align-items: center;
+      margin: 2rem 0 0;
     }
     .cta a.btn {
-      background: var(--lichen); color: var(--stone);
-      text-decoration: none; padding: .72rem 1.1rem;
-      font-weight: 600; font-size: .95rem;
+      background: var(--ink); color: var(--paper); text-decoration: none;
+      padding: .7rem 1.1rem; font-size: .95rem;
     }
-    .cta a.btn:hover { background: var(--paper); }
+    .cta a.btn:hover { background: #2a261f; }
     footer {
       border-top: 1px solid var(--rule);
-      padding: 1.5rem 5vw 2.6rem;
-      font-family: "Source Sans 3", sans-serif;
-      font-size: .82rem; color: var(--muted); line-height: 1.55;
+      padding: 1.4rem 6vw 2.4rem; font-size: .85rem; color: var(--muted);
     }
-    .cites {
-      max-width: 92rem; margin: 0 auto;
-      display: grid; gap: .35rem 2.5rem;
+    @media (max-width: 820px) {
+      .kpis, .cards { grid-template-columns: 1fr 1fr; }
+      .time li { grid-template-columns: 1fr; gap: .2rem; }
     }
-    footer p { margin: 0 0 .45rem; }
-    footer a { color: var(--lichen); }
-    @media (min-width: 720px) {
-      .kpis { grid-template-columns: repeat(4, 1fr); }
-      .kpis article,
-      .kpis article:nth-child(odd),
-      .kpis article:nth-child(even) { padding: 1.2rem 1.15rem 1.3rem; }
-      .kpis article:first-child { padding-left: 5vw; }
-      .kpis article:last-child { padding-right: 5vw; }
-      .hero { padding: 5.5rem 5vw 2.4rem; }
-      .cards { grid-template-columns: 1fr 1fr 1fr; }
-      .time li {
-        grid-template-columns: 9.4rem 1fr;
-        gap: 1.1rem; align-items: baseline;
-      }
-      figure.still img { height: min(64vh, 42rem); }
-      .cites { grid-template-columns: 1fr 1fr; }
-    }
-    @media (min-width: 960px) {
-      .pair { grid-template-columns: 1fr 1fr; gap: 1.6rem 2.2rem; align-items: start; }
-      table { min-width: 0; }
-      .time {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0;
-        border-top: 1px solid var(--rule);
-      }
-      .time li {
-        display: block;
-        grid-template-columns: none;
-        padding: 1rem 1.3rem 1.15rem 0;
-        border-bottom: none;
-        border-right: 1px solid var(--rule);
-      }
-      .time li:last-child { border-right: none; padding-right: 0; }
-      .time li:not(:first-child) { padding-left: 1.3rem; }
-      .what { grid-template-columns: 1fr 1fr 1fr; }
-      .hero {
-        display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        column-gap: 3.2rem;
-        align-items: end;
-      }
-      .hero .kicker, .hero h1 { grid-column: 1 / -1; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-    }
-    @media print {
-      body { background: #fff; color: #111; }
-      a { color: #111; }
-      header, .cta a.btn { color: #111; background: none; }
-      .gold, .cards article { border: 1px solid #ccc; background: none; }
-      figure.still img { height: auto; }
+    @media (max-width: 520px) {
+      .kpis, .cards { grid-template-columns: 1fr; }
+      body { font-size: 18px; }
     }
   </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
   <header>
     <span>Climate of Britain · 5000–2000 BC</span>
-    <a href="https://timdaw37.github.io/britain-climate-5000-2000bc/">See the proxies</a>
+    <a href="index.html" target="_blank">Graphs (desk)</a>
   </header>
 
-  <main id="main">
-    <section class="hero">
-      <p class="kicker">The climate at Stonehenge, 5000–2000 BC</p>
-      <h1>The climate was a working year. Not a road, and not a crash.</h1>
-      <p class="lede">
-        July in this reconstruction sits in the same band as Boscombe today.
-        That is a growing season, not a famine climate. A 40-tonne sarsen on the
-        frozen Avon would still have needed about a metre of ice. These millennia
-        do not grow that ice, and they do not show a British climate collapse
-        that explains Beaker replacement.
-      </p>
-      <p class="see"><a href="https://timdaw37.github.io/britain-climate-5000-2000bc/">See the proxies</a> for every series, citation and uncertainty band.</p>
-    </section>
+  <section class="hero">
+    <p class="kicker">Stonehenge, Wiltshire</p>
+    <h1>The same winters as today, and an Avon too soft to carry stone</h1>
+    <p class="stand">
+      Mid-Holocene Wessex sat in the same maritime temperate climate as the modern Plain. Dragging a
+      forty-tonne sarsen across a frozen River Avon would have needed close to a metre of solid ice, and
+      nothing in this record produces winters cold enough to grow it. The Beaker-period ancestry
+      replacement is real, but it follows the stones rather than preceding them — a climate crash timed
+      to explain either event has the order backwards. The full set of proxy graphs behind these figures
+      is on the <a href="index.html" target="_blank">desk page</a>, built for a wider screen.
+    </p>
+  </section>
 
-    <div class="kpis">
+  <div class="kpis">
+    <div><span>Annual mean</span><b>8.6–11.1 °C</b><i>today 10.4 °C</i></div>
+    <div><span>July</span><b>15.6–18.5 °C</b><i>today 17.1 °C</i></div>
+    <div><span>January</span><b>1.8–5.3 °C</b><i>today 4.6 °C</i></div>
+    <div><span>Annual rain</span><b>591–1,001 mm</b><i>today 783 mm · wide band</i></div>
+  </div>
+
+  <div class="wrap">
+    <p style="font-size:.92rem;color:var(--muted);margin-top:1.1rem">
+      These ranges include the full published reconstruction uncertainty across four millennial slices
+      (5050, 4050, 3050 and 2050 BC): Mauri et al. (2015) pollen-grid anomalies for the 1° cell over
+      Wessex, added to the Boscombe Down 1971–2000 climate normals. Annual temperature error is borrowed
+      from the summer standard error, since no annual figure is published. Annual rainfall assumes spring
+      and autumn track the mean of winter and summer. None of this is a weather diary for any single year.
+    </p>
+
+    <div class="gold">
+      <h2>Gold's formula, applied to the Avon</h2>
+      <p class="eq">P = A × h²</p>
+      <p>
+        The bearing capacity of floating ice is still commonly estimated from Gold's formula (Gold 1971),
+        the standard rule of thumb behind Canadian ice-road practice: P is the safe load in kilograms, h
+        is the ice thickness in centimetres, and A is a constant of about 3.5 for good-quality river ice
+        under a conservative margin. Solving for a forty-tonne sarsen, close to the heaviest stones at
+        Stonehenge, gives a required thickness of about 107 cm. Growing a metre of solid ice takes
+        several thousand freezing-degree-days of sustained sub-zero weather. The reconstructed January
+        means for this window run from about 2 °C to 5 °C — a southern English winter, not the conditions
+        that build ice roads. A dusting of lying snow on the downs, as some accounts propose (after Hill
+        1961), is a smaller and separate claim from a load-bearing river crossing. Glacial transport of
+        the stones themselves by moving ice sheets belongs to a much earlier period again, tens of
+        thousands of years before this record begins, and these proxies have nothing to say about that
+        question either way.
+      </p>
+    </div>
+
+    <h2>The dates do not line up into a single story</h2>
+    <ol class="time">
+      <li><strong>~3000 BC</strong><span>Stonehenge I: the ditch and bank, and the first bluestones, raised by Neolithic builders.</span></li>
+      <li><strong>~2500 BC</strong><span>The sarsen circle and trilithons go up — still several centuries before the 4.2 ka label.</span></li>
+      <li><strong>~2450–2400 BC</strong><span>Beaker arrivals begin. Ancient-DNA studies find a substantial ancestry replacement across Britain from this point; that is a genetic finding, not one this climate data makes or explains.</span></li>
+      <li><strong>~2200 BC</strong><span>The 4.2 ka interval, usually framed as a global drought. Roland et al. (2014) find no coherent event in the British and Irish peat record; the eastern-England tree-ring record (Bebchuk et al. 2025) describes this period in wet, inundation terms rather than a freeze.</span></li>
+    </ol>
+
+    <h2>Three claims, kept separate</h2>
+    <div class="cards">
       <article>
-        <span>Annual mean</span>
-        <b>8.6–11.1 °C</b>
-        <i>today 10.4 °C</i>
+        <h3>A frozen Avon</h3>
+        <p>Not supported as a working assumption for moving twenty- to fifty-tonne sarsens. Gold's formula asks for close to a metre of ice; these winters do not produce it.</p>
       </article>
       <article>
-        <span>July</span>
-        <b>15.6–18.5 °C</b>
-        <i>today 17.1 °C</i>
+        <h3>Crash, then stones, then Beakers</h3>
+        <p>The order is wrong. The large sarsens were already standing well before 2200 BC, and the Beaker-period replacement follows them. No British climate catastrophe in this record explains either event.</p>
       </article>
       <article>
-        <span>January</span>
-        <b>1.8–5.3 °C</b>
-        <i>today 4.6 °C</i>
-      </article>
-      <article>
-        <span>Annual rain</span>
-        <b>580–1,020 mm</b>
-        <i>today 783 mm · wide band</i>
+        <h3>Delivery by ice sheet</h3>
+        <p>A Pleistocene question, not a Holocene one. These proxies cover 5000–2000 BC, long after the ice sheets that could have moved stone were gone, and have nothing to add to that separate debate.</p>
       </article>
     </div>
 
-    <figure class="still">
-      <img src="stonehenge.jpg" width="2587" height="1293" alt="Stonehenge in snow, winter 2013: the sarsen circle on a white Plain under a grey sky." />
-      <figcaption>Stonehenge, winter 2013. Photograph: Tim Daw. Lying snow on the downs is the smaller claim. It is not a metre of ice on the Avon, and a hard January is not a famine.</figcaption>
-    </figure>
+    <p>
+      The strongest British signal across this interval is moisture balance, not temperature, and there is
+      no thermometer on Salisbury Plain from the Neolithic. What exists instead is four millennial pollen
+      slices set against a stack of peat, chironomid, oak and speleothem records — enough to rule out a
+      frozen river and a climate-driven collapse, without pretending to be a weather diary for any single
+      year.
+    </p>
 
-    <div class="wrap">
-      <p class="note">
-        Ranges include published reconstruction uncertainty across four millennial slices
-        (5050, 4050, 3050, 2050 BC). Mauri et al. 2015 pollen-grid anomalies for the 1° cell
-        near 51°N, 2°W, added to Boscombe Down 1971–2000. Annual temperature error is borrowed
-        from the summer standard error. Annual rain assumes spring and autumn track the mean
-        of winter and summer. This is not a weather diary.
-        <a href="https://timdaw37.github.io/britain-climate-5000-2000bc/">See the proxies.</a>
-      </p>
-
-      <div class="pair">
-        <div class="gold">
-          <h2>Gold’s formula, on the Avon</h2>
-          <p class="eq">P = A h² &nbsp;→&nbsp; 40 t, river ice &nbsp;<b>107 cm</b></p>
-          <p>
-            Canadian ice-road practice (Gold 1971): load in kilograms, thickness of good
-            clear floating ice in centimetres. A ≈ 3.5 on a river, 4 on a typical lake.
-            A metre of ice wants on the order of 4,000–5,000 freezing-degree-days.
-            A Wessex January whose millennial mean is about 3 °C does not supply that.
-            Lying snow on the downs (Hill 1961) is a different, smaller claim — sledging
-            on snow on land, not a frozen river as a road.
-          </p>
-          <div class="table-scroll">
-          <table>
-            <thead>
-              <tr><th>Load</th><th>A</th><th>Ice</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>20 t sarsen</td><td>3.5</td><td>76 cm</td></tr>
-              <tr><td>40 t sarsen</td><td>3.5</td><td>107 cm</td></tr>
-              <tr><td>40 t</td><td>4</td><td>100 cm</td></tr>
-              <tr><td>50 t</td><td>3.5</td><td>120 cm</td></tr>
-            </tbody>
-          </table>
-          </div>
-        </div>
-
-        <div class="slices">
-          <h2>Four millennial slices, not a diary</h2>
-          <p>
-            Central values only. Boscombe Down 1971–2000 baseline: annual 9.85 °C,
-            January 4.0 °C, July 16.75 °C, rain 736 mm. Today (1991–2020): 10.4 °C,
-            4.6 °C, 17.1 °C, 783 mm.
-          </p>
-          <div class="table-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>Slice</th>
-                <th>Annual °C</th>
-                <th>July °C</th>
-                <th>January °C</th>
-                <th>Rain mm</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>5050 BC</td><td>9.6</td><td>17.4</td><td>2.7</td><td>731</td></tr>
-              <tr><td>4050 BC</td><td>10.1</td><td>16.7</td><td>4.2</td><td>816</td></tr>
-              <tr><td>3050 BC</td><td>9.6</td><td>16.7</td><td>3.8</td><td>873</td></tr>
-              <tr><td>2050 BC</td><td>9.6</td><td>16.5</td><td>4.0</td><td>838</td></tr>
-            </tbody>
-          </table>
-          </div>
-        </div>
-      </div>
-
-      <h2>The dates do not make a single story</h2>
-      <ol class="time">
-        <li>
-          <strong>~3000 BC</strong>
-          <span>Stonehenge I. Ditch, first bluestones. Neolithic builders.</span>
-        </li>
-        <li>
-          <strong>~2500 BC</strong>
-          <span>Sarsen circle and trilithons. Still before the 4.2 ka label. Raising those stones wants a labour surplus, not an emptied land.</span>
-        </li>
-        <li>
-          <strong>~2450–2400 BC</strong>
-          <span>Beaker arrivals. Ancestry replacement begins. Genetic fact. The British climate series do not show a catastrophe that explains it.</span>
-        </li>
-        <li>
-          <strong>~2200 BC</strong>
-          <span>4.2 ka interval as a global drought <em>label</em>. Roland et al. 2014: no coherent British–Irish peat event. Fenland yew woodland ends in wet / inundation terms, not a freeze.</span>
-        </li>
-      </ol>
-
-      <h2>What the graphs are not</h2>
-      <div class="cards">
-        <article>
-          <h3>A frozen Avon</h3>
-          <p>Not a planning climate for 20–50 t sarsens. Gold wants about a metre of good ice. These winters do not grow it on the river.</p>
-        </article>
-        <article>
-          <h3>Crash, then stones, then Beakers</h3>
-          <p>Wrong order. The big stones are earlier than 4.2 ka. Replacement is genetic fact. A British famine or freeze that explains it is not in these series. Do not read a red crash at 2400 BC off the Charman 2006 peat stack: that cliff is low replication at the start of the stack, a plotting artefact.</p>
-        </article>
-        <article>
-          <h3>Pleistocene delivery</h3>
-          <p>A different debate, a different millennium. These graphs are Holocene climate. They are the wrong tool for ice-sheet geology.</p>
-        </article>
-      </div>
-
-      <h2>What they are</h2>
-      <div class="what cards">
-        <article>
-          <h3>A year you could farm</h3>
-          <p>
-            July 15.6–18.5 °C against today’s 17.1. That is the same growing-season
-            world as now, not a harvest diary and not a proven bumper crop.
-            Moving sarsens takes people with food to spare. A millennial mean in
-            this band is a climate in which a labour surplus is possible.
-            A famine that empties Wessex is not what these slices show.
-          </p>
-        </article>
-        <article>
-          <h3>Moisture more than temperature</h3>
-          <p>
-            Millennial slices, not weather. Uncertainty is the point: pollen
-            transfer functions are coarse; after about 4000 BC, clearance mixes a
-            human signal into southern English pollen; a wet decade is invisible
-            inside a thousand-year mean. Peat, oak and speleothem records speak
-            to water balance first.
-          </p>
-        </article>
-        <article>
-          <h3>Replacement, without a British crash</h3>
-          <p>
-            Beaker ancestry replacement from ~2450–2400 BC is genetic fact.
-            The 4.2 ka drought <em>label</em> is later, ~2200 BC. Write neither
-            that climate caused the replacement nor that it did not. Write that
-            these series do not show a catastrophe that explains it.
-            <a href="https://timdaw37.github.io/britain-climate-5000-2000bc/">See the proxies.</a>
-          </p>
-        </article>
-      </div>
-
-      <div class="cta">
-        <a class="btn" href="https://timdaw37.github.io/britain-climate-5000-2000bc/">Full explorer, sources, series notes</a>
-        <a href="https://github.com/TimDaw37/britain-climate-5000-2000bc">Source on GitHub</a>
-        <a href="CITATIONS.md">Citations</a>
-      </div>
+    <div class="cta">
+      <a class="btn" href="index.html" target="_blank">Open the proxy explorer</a>
+      <a href="https://github.com/TimDaw37/britain-climate-5000-2000bc" target="_blank">Source on GitHub</a>
+      <a href="CITATIONS.md" target="_blank">Citations</a>
     </div>
-  </main>
+  </div>
 
   <footer>
-    <div class="cites">
-      <p>Mauri et al. (2015), <em>Quaternary Science Reviews</em> 112, 109–127 — EPOCH-2 pollen-grid anomalies, 1° cell near 51°N, 2°W.</p>
-      <p>Boscombe Down 1971–2000 and 1991–2020 means, Met Office — the pollen-era normal and today’s comparison.</p>
-      <p>Gold, L.W. (1971), <em>Canadian Geotechnical Journal</em> 8, 170–181 — ice-road formula P = A h².</p>
-      <p>Hill (1961) — sledging on snow on land; a different, smaller claim than a frozen Avon.</p>
-      <p>Roland et al. (2014), <em>Quaternary Science Reviews</em> 83, 11–27 — no coherent 4.2 ka peat event in Britain and Ireland.</p>
-      <p>Photograph: Tim Daw, Stonehenge in snow, winter 2013. Viewer by Daw / Grok, 2026. This page argues; <a href="https://timdaw37.github.io/britain-climate-5000-2000bc/">the explorer</a> shows the series.</p>
-    </div>
+    Mauri et al. 2015 · Boscombe Down 1971–2000 / 1991–2020 · Gold 1971 · Roland et al. 2014 ·
+    Bebchuk et al. 2025 · Nash et al. 2020 (sarsen sourcing, West Woods).
   </footer>
 </body>
 </html>
