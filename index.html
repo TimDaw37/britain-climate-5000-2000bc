@@ -22,7 +22,24 @@ window.CLIMATE_DATA={"meta":{"title":"Climate of Britain, 5000–2000 BC","subti
       --good: #8fba7a;
     }
     * { box-sizing: border-box; }
-    html, body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+    html, body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; overflow-x: hidden; }
+    .phone-note { display: none; }
+    @media (max-width: 720px) {
+      header { padding: 1.1rem 4vw .8rem; }
+      header p { font-size: .92rem; }
+      main { padding: 1rem 3vw 3rem; }
+      nav { padding: .6rem 3vw; gap: .65rem; font-size: .85rem; }
+      .toolbar { font-size: .8rem; }
+      .chart { padding: .4rem .2rem 0; border-radius: 8px; }
+      .chart h2 { margin: .45rem .6rem .1rem; font-size: 1rem; }
+      .chart .note { margin: 0 .6rem .35rem; font-size: .8rem; }
+      #c-head-t { height: 260px !important; }
+      #c-head-p { height: 240px !important; }
+      #c-hydro, #c-overlay { height: 250px !important; }
+      #c-talkin, #c-cave, #c-tsi, #c-gisp, #c-bond { height: 210px !important; }
+      .js-plotly-plot .plotly .modebar { display: none !important; }
+      .phone-note { display: block; background: #221e18; border: 1px solid var(--line); border-radius: 10px; padding: .7rem .9rem; margin: 0 0 1rem; color: var(--muted); font-size: .9rem; }
+    }
     a { color: var(--accent); }
     header {
       padding: 2.2rem 6vw 1.2rem;
@@ -82,6 +99,7 @@ window.CLIMATE_DATA={"meta":{"title":"Climate of Britain, 5000–2000 BC","subti
       <span class="pill">BP datum: years before 1950</span>
       <span class="pill">Data accessed 12 Sep 2026</span>
       <span class="pill">v0.5 — headlines tightened; Gold / Avon / Beaker timing</span>
+      <a class="pill" href="story.html" style="text-decoration:none">The argument →</a>
     </div>
   </header>
   <nav>
@@ -94,6 +112,8 @@ window.CLIMATE_DATA={"meta":{"title":"Climate of Britain, 5000–2000 BC","subti
     <a href="#cite">How to cite</a>
   </nav>
   <main>
+      <p class="phone-note">These graphs are cramped on a phone. The short version is on <a href="story.html">the argument page</a>. Rotate the screen or use a desk for the full series.</p>
+
     
     <section id="headline" style="margin-bottom:1.6rem">
       <div class="card" style="border-color:#d4a05666">
@@ -251,12 +271,14 @@ window.CLIMATE_DATA={"meta":{"title":"Climate of Britain, 5000–2000 BC","subti
     function boot(data) {
     D = data;
     const byId = Object.fromEntries(D.series.map(s => [s.id, s]));
+    const phone = () => window.matchMedia("(max-width: 720px)").matches;
+    const plotCfg = () => ({ responsive: true, displaylogo: false, displayModeBar: !phone(), scrollZoom: false });
     const layoutBase = () => ({
       paper_bgcolor: "rgba(0,0,0,0)",
       plot_bgcolor: "rgba(0,0,0,0)",
-      font: { color: "#f3ece1", family: "system-ui, sans-serif", size: 12 },
-      margin: { t: 20, r: 20, b: 48, l: 58 },
-      legend: { orientation: "h", y: 1.14, font: { size: 12, color: "#f3ece1" }, bgcolor: "rgba(20,18,15,0.88)", bordercolor: "#3a342b", borderwidth: 1 },
+      font: { color: "#f3ece1", family: "system-ui, sans-serif", size: phone() ? 10 : 12 },
+      margin: phone() ? { t: 8, r: 8, b: 36, l: 38 } : { t: 20, r: 20, b: 48, l: 58 },
+      legend: { orientation: "h", y: phone() ? -0.22 : 1.14, font: { size: phone() ? 9 : 12, color: "#f3ece1" }, bgcolor: "rgba(20,18,15,0.88)", bordercolor: "#3a342b", borderwidth: 1 },
       hovermode: "x unified",
       hoverlabel: { bgcolor: "#241f18", font: { color: "#f3ece1", size: 13, family: "system-ui, sans-serif" }, bordercolor: "#d4a056", align: "left" },
       xaxis: {
@@ -420,7 +442,7 @@ window.CLIMATE_DATA={"meta":{"title":"Climate of Britain, 5000–2000 BC","subti
         shapes: shapes(),
         legend: { orientation:"h", y:1.18, font:{size:11} },
         margin: { t: 28, r: 20, b: 48, l: 58 }
-      }), {responsive:true, displaylogo:false});
+      }), plotCfg());
 
       const pTraces = [
         ...band(H.bcs, H.pannLo, H.pannHi, "rgba(106,166,200,0.16)", "Annual ±1σ"),
@@ -436,7 +458,7 @@ window.CLIMATE_DATA={"meta":{"title":"Climate of Britain, 5000–2000 BC","subti
         shapes: shapes(),
         legend: { orientation:"h", y:1.18, font:{size:11} },
         margin: { t: 28, r: 20, b: 48, l: 58 }
-      }), {responsive:true, displaylogo:false});
+      }), plotCfg());
     }
 
     function xy(s, invert=false) {
@@ -516,7 +538,7 @@ window.CLIMATE_DATA={"meta":{"title":"Climate of Britain, 5000–2000 BC","subti
           { x: 2000, y: 1, yref: "paper", text: "2000 BC", showarrow: false, font: { color: "#d4a056", size: 10 }, xanchor: "right" },
           { x: 2493, y: 0.08, yref: "paper", text: "Charman 2006 starts · oak GDO ~2500 BC", showarrow: false, font: { color: "#8fba7a", size: 11 }, xanchor: "left" }
         ]
-      }), {responsive: true, displaylogo: false});
+      }), plotCfg());
 
 
       const tk = byId.talkin;
@@ -538,12 +560,12 @@ window.CLIMATE_DATA={"meta":{"title":"Climate of Britain, 5000–2000 BC","subti
         const mb = modernHline(16.75, "Boscombe Down July 1971–2000 16.8 °C (Wessex, not these lakes)");
         if (mb) tTraces.push(mb);
         Plotly.react("c-talkin", tTraces, Object.assign(layoutBase(), { yaxis:{ title:"July °C", gridcolor:"#3a342b" }, shapes: shapes() }),
-        {responsive:true, displaylogo:false});
+        plotCfg());
       }
 
       Plotly.react("c-cave", [line(byId.cc3, "CC3 δ¹⁸O ‰ VPDB", "#d4a056")],
         Object.assign(layoutBase(), { yaxis: { title: "δ¹⁸O ‰ VPDB", gridcolor: "#3a342b" }, shapes: shapes() }),
-        {responsive: true, displaylogo: false});
+        plotCfg());
 
       const tsi = byId.tsi;
       const tsiTraces = [
@@ -563,15 +585,15 @@ window.CLIMATE_DATA={"meta":{"title":"Climate of Britain, 5000–2000 BC","subti
       ].filter(Boolean);
       Plotly.react("c-tsi", tsiTraces,
         Object.assign(layoutBase(), { yaxis: { title: "ΔTSI (W m⁻²)", gridcolor: "#3a342b" }, shapes: shapes() }),
-        {responsive: true, displaylogo: false});
+        plotCfg());
 
       Plotly.react("c-gisp", [line(byId.gisp2, "GISP2 °C", "#8aa0c8"), modernHline(-31.4, "Late-Holocene GISP2 ≈ −31.4 °C")].filter(Boolean),
         Object.assign(layoutBase(), { yaxis: { title: "°C", gridcolor: "#3a342b" }, shapes: shapes() }),
-        {responsive: true, displaylogo: false});
+        plotCfg());
 
       Plotly.react("c-bond", [line(byId.bond2001, "Bond stack % HSG", "#c9845a"), modernHline(5.5, "Late-Holocene ~5–6% HSG")].filter(Boolean),
         Object.assign(layoutBase(), { yaxis: { title: "% HSG", gridcolor: "#3a342b" }, shapes: shapes() }),
-        {responsive: true, displaylogo: false});
+        plotCfg());
 
       const overlayIds = ["charman2006", "thorne", "cc3", "talkin", "meenachrinna", "gisp2", "bond2001", "tsi"];
       const colors = { charman2006: "#6aa6c8", thorne: "#cfc6b8", cc3: "#d4a056", talkin: "#c9845a", meenachrinna: "#8fba7a", gisp2: "#8aa0c8", bond2001: "#e0a070", tsi: "#cfc6b8" };
@@ -602,11 +624,16 @@ window.CLIMATE_DATA={"meta":{"title":"Climate of Britain, 5000–2000 BC","subti
           shapes: shapes(),
           legend: { orientation:"h", y:1.16, font:{size:13, color:"#f3ece1"}, bgcolor:"#14120f", bordercolor:"#d4a05666", borderwidth:1 }
         }),
-        {responsive: true, displaylogo: false});
+        plotCfg());
     }
 
     ["show82","show42","showWet","showOak","showFen","wide"].forEach(id => {
       document.getElementById(id).addEventListener("change", () => { drawAll(); drawHeadline(); });
+    });
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => { drawAll(); drawHeadline(); }, 200);
     });
 
     const cat = document.getElementById("catalogue-cards");
