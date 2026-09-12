@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The climate at Stonehenge, 5000–2000 BC</title>
-  <meta name="description" content="Mid-Holocene Wessex was a maritime temperate climate like now. Not a frozen Avon, not a crash timed to the Beakers, not Pleistocene ice." />
+  <meta name="description" content="Mid-Holocene Wessex was a maritime temperate climate like now: a growing season, not a frozen Avon, not a famine that explains Beaker replacement." />
   <link rel="canonical" href="https://timdaw37.github.io/britain-climate-5000-2000bc/story.html" />
   <meta name="theme-color" content="#141210" />
   <meta property="og:title" content="The climate at Stonehenge, 5000–2000 BC" />
-  <meta property="og:description" content="The winters were like now. They were not a road. Gold wants a metre of ice for a 40-tonne sarsen. These millennia do not grow it." />
+  <meta property="og:description" content="A working year, like now. Not a frozen Avon, not a harvest collapse, not a crash timed to the Beakers." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://timdaw37.github.io/britain-climate-5000-2000bc/story.html" />
   <meta property="og:image" content="https://timdaw37.github.io/britain-climate-5000-2000bc/stonehenge.jpg" />
@@ -58,20 +58,29 @@
     }
     header a { color: var(--lichen); text-decoration: none; border-bottom: 1px solid var(--lichen-dim); }
     header a:hover { color: var(--paper); border-bottom-color: var(--paper); }
-    .hero { padding: 10vw 5vw 2.2rem; max-width: 46rem; }
+    .hero {
+      padding: 8vw 5vw 2.2rem;
+      max-width: 92rem;
+      margin: 0 auto;
+    }
     .kicker {
       font-family: "Source Sans 3", sans-serif;
       font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
       color: var(--brass); margin: 0 0 1rem;
     }
     h1 {
-      font-size: clamp(2.15rem, 7.4vw, 4.05rem);
-      line-height: 1.04; font-weight: 600; margin: 0 0 1.4rem;
+      font-size: clamp(2.2rem, 5.4vw, 5.1rem);
+      line-height: 1.05; font-weight: 600; margin: 0 0 1.3rem;
       letter-spacing: -.03em;
+      max-width: none;
+    }
+    .lede {
+      font-size: 1.12rem; max-width: none; color: #d8d0c0; margin: 0 0 1rem;
     }
     .see {
       font-family: "Source Sans 3", sans-serif;
       font-size: .95rem;
+      margin: 0;
     }
     .kpis {
       display: grid;
@@ -104,7 +113,7 @@
     }
     figure.still img {
       display: block; width: 100%; height: min(62vh, 40rem);
-      object-fit: cover; object-position: 50% 46%;
+      object-fit: cover; object-position: 50% 40%;
     }
     figure.still figcaption {
       font-family: "Source Sans 3", sans-serif;
@@ -189,8 +198,8 @@
     .cards p { font-size: 1rem; margin: 0; color: #d8d0c0; }
     .what {
       display: grid;
-      gap: 0 2.5rem;
-      margin: 0 0 1.6rem;
+      gap: .7rem;
+      margin: 1rem 0 2rem;
     }
     .cta {
       display: flex; flex-wrap: wrap; gap: .85rem 1.2rem;
@@ -222,7 +231,7 @@
       .kpis article:nth-child(even) { padding: 1.2rem 1.15rem 1.3rem; }
       .kpis article:first-child { padding-left: 5vw; }
       .kpis article:last-child { padding-right: 5vw; }
-      .hero { padding: 7.5vh 5vw 2.4rem; max-width: 58rem; }
+      .hero { padding: 5.5rem 5vw 2.4rem; }
       .cards { grid-template-columns: 1fr 1fr 1fr; }
       .time li {
         grid-template-columns: 9.4rem 1fr;
@@ -249,7 +258,14 @@
       }
       .time li:last-child { border-right: none; padding-right: 0; }
       .time li:not(:first-child) { padding-left: 1.3rem; }
-      .what { grid-template-columns: 1fr 1fr; }
+      .what { grid-template-columns: 1fr 1fr 1fr; }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        column-gap: 3.2rem;
+        align-items: end;
+      }
+      .hero .kicker, .hero h1 { grid-column: 1 / -1; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -273,7 +289,14 @@
   <main id="main">
     <section class="hero">
       <p class="kicker">The climate at Stonehenge, 5000–2000 BC</p>
-      <h1>The winters were like now. They were not a road.</h1>
+      <h1>The climate was a working year. Not a road, and not a crash.</h1>
+      <p class="lede">
+        July in this reconstruction sits in the same band as Boscombe today.
+        That is a growing season, not a famine climate. A 40-tonne sarsen on the
+        frozen Avon would still have needed about a metre of ice. These millennia
+        do not grow that ice, and they do not show a British climate collapse
+        that explains Beaker replacement.
+      </p>
       <p class="see"><a href="https://timdaw37.github.io/britain-climate-5000-2000bc/">See the proxies</a> for every series, citation and uncertainty band.</p>
     </section>
 
@@ -301,8 +324,8 @@
     </div>
 
     <figure class="still">
-      <img src="stonehenge.jpg" width="1080" height="647" alt="Stonehenge in snow, winter 2013: the sarsen circle on a white Plain under a grey sky." />
-      <figcaption>Stonehenge, winter 2013. Photograph: Tim Daw. Lying snow on the downs is the smaller claim. It is not a metre of ice on the Avon.</figcaption>
+      <img src="stonehenge.jpg" width="2587" height="1293" alt="Stonehenge in snow, winter 2013: the sarsen circle on a white Plain under a grey sky." />
+      <figcaption>Stonehenge, winter 2013. Photograph: Tim Daw. Lying snow on the downs is the smaller claim. It is not a metre of ice on the Avon, and a hard January is not a famine.</figcaption>
     </figure>
 
     <div class="wrap">
@@ -379,7 +402,7 @@
         </li>
         <li>
           <strong>~2500 BC</strong>
-          <span>Sarsen circle and trilithons. Still before the 4.2 ka label.</span>
+          <span>Sarsen circle and trilithons. Still before the 4.2 ka label. Raising those stones wants a labour surplus, not an emptied land.</span>
         </li>
         <li>
           <strong>~2450–2400 BC</strong>
@@ -399,7 +422,7 @@
         </article>
         <article>
           <h3>Crash, then stones, then Beakers</h3>
-          <p>Wrong order. The big stones are earlier than 4.2 ka. Do not read a red crash at 2400 BC off the Charman 2006 peat stack: that cliff is low replication at the start of the stack, a plotting artefact.</p>
+          <p>Wrong order. The big stones are earlier than 4.2 ka. Replacement is genetic fact. A British famine or freeze that explains it is not in these series. Do not read a red crash at 2400 BC off the Charman 2006 peat stack: that cliff is low replication at the start of the stack, a plotting artefact.</p>
         </article>
         <article>
           <h3>Pleistocene delivery</h3>
@@ -408,20 +431,37 @@
       </div>
 
       <h2>What they are</h2>
-      <div class="what">
-      <p>
-        Moisture more than temperature. Millennial slices, not weather.
-        Uncertainty is the point: pollen transfer functions are coarse; after about
-        4000 BC, clearance mixes a human signal into southern English pollen;
-        a wet decade is invisible inside a thousand-year mean.
-        There is no thermometer on Salisbury Plain in the Neolithic.
-        Four slices and a stack of peat, chironomid, oak and speleothem records
-        are what exist.
-      </p>
-      <p>
-        Replacement is genetic fact. A British climate catastrophe that explains it
-        is not in these series.
-      </p>
+      <div class="what cards">
+        <article>
+          <h3>A year you could farm</h3>
+          <p>
+            July 15.6–18.5 °C against today’s 17.1. That is the same growing-season
+            world as now, not a harvest diary and not a proven bumper crop.
+            Moving sarsens takes people with food to spare. A millennial mean in
+            this band is a climate in which a labour surplus is possible.
+            A famine that empties Wessex is not what these slices show.
+          </p>
+        </article>
+        <article>
+          <h3>Moisture more than temperature</h3>
+          <p>
+            Millennial slices, not weather. Uncertainty is the point: pollen
+            transfer functions are coarse; after about 4000 BC, clearance mixes a
+            human signal into southern English pollen; a wet decade is invisible
+            inside a thousand-year mean. Peat, oak and speleothem records speak
+            to water balance first.
+          </p>
+        </article>
+        <article>
+          <h3>Replacement, without a British crash</h3>
+          <p>
+            Beaker ancestry replacement from ~2450–2400 BC is genetic fact.
+            The 4.2 ka drought <em>label</em> is later, ~2200 BC. Write neither
+            that climate caused the replacement nor that it did not. Write that
+            these series do not show a catastrophe that explains it.
+            <a href="https://timdaw37.github.io/britain-climate-5000-2000bc/">See the proxies.</a>
+          </p>
+        </article>
       </div>
 
       <div class="cta">
