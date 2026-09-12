@@ -2,10 +2,12 @@
 
 Interactive, referenced graphs of published palaeoclimate proxies for the British Isles between **5000 and 2000 BC** (about 6950–3950 cal yr BP).
 
-Open the working page:
+Open the working pages:
 
-- [`index.html`](index.html) — single-page viewer. Series data are embedded; **Plotly is loaded from `cdn.plot.ly` at runtime**, so the page needs a network connection.
+- [`story.html`](story.html) — short argument (Avon / Gold / Beaker timing). Designed front.
+- [`index.html`](index.html) — full proxy explorer. Series data are embedded; **Plotly is loaded from `cdn.plot.ly` at runtime**, so the page needs a network connection.
 - Live: https://timdaw37.github.io/britain-climate-5000-2000bc/
+- To replace the front with a Grok Build version, follow [`GROK_BUILD.md`](GROK_BUILD.md). Leave `index.html` as the explorer.
 
 This is a **viewer**, not a new climate reconstruction. Each series carries the citation, archive, what the proxy measures, and an uncertainty note.
 
@@ -35,6 +37,7 @@ Current build: **v0.5** (12 September 2026).
 - Not a single “temperature of Britain” curve.
 - Not a verdict on the global 4.2 ka event.
 - Not a climate crash at ~2400 BC timed to Beaker arrival. The peat-stack cliff at the start of Charman 2006 is low replication plus one outlier; Charman et al. do not list a major wet shift then.
+- Not a frozen Avon capable of carrying 40-tonne sarsens (Gold 1971 wants ~1 m of ice).
 
 ## Data policy
 
