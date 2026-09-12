@@ -4,12 +4,12 @@ Interactive, referenced graphs of published palaeoclimate proxies for the Britis
 
 Open the working page:
 
-- [`index.html`](index.html) — self-contained viewer (Plotly from CDN; data embedded)
-- After Pages is on: https://timdaw37.github.io/britain-climate-5000-2000bc/
+- [`index.html`](index.html) — single-page viewer. Series data are embedded; **Plotly is loaded from `cdn.plot.ly` at runtime**, so the page needs a network connection.
+- Live: https://timdaw37.github.io/britain-climate-5000-2000bc/
 
 This is a **viewer**, not a new climate reconstruction. Each series carries the citation, archive, what the proxy measures, and an uncertainty note.
 
-Current build: **v0.4** (12 September 2026).
+Current build: **v0.5** (12 September 2026).
 
 ## What is plotted
 
@@ -21,11 +21,13 @@ Current build: **v0.4** (12 September 2026).
 | Langdon et al. 2004 | Talkin Tarn chironomid July T | From ~3808 BC |
 | Barber et al. 2013 | Bigland Tarn chironomid July T | From ~2856 BC |
 | Taylor et al. 2018 | Lough Meenachrinna chironomid July T | Full window |
-| McDermott CC3 (SISAL) | Crag Cave, SW Ireland, δ¹⁸O | Full window |
+| McDermott CC3 (SISAL) | Crag Cave, SW Ireland, δ18O | Full window |
 | Alley 2000 GISP2 | Greenland temperature (context) | Full window |
 | Bond et al. 2001 | N Atlantic drift-ice stack (context) | Full window |
 | Steinhilber et al. 2009 | Total solar irradiance ±1σ (forcing) | Full window |
 | Leuschner et al. 2002 | Irish/continental bog-oak generation changes | Events ~4000 and ~2500 BC (no annual curve file) |
+| Boswijk / ITRDB BRIT036 | Thorne Moors subfossil oak ring-width | 3772–3016 BC (site hydrology, not °C) |
+| Bebchuk et al. 2025/2026 | Fenland yew span + wet-end interpretation | Bars 2668–2213 BC and decline/end; annual isotope file not public |
 
 ## What this is not
 
@@ -40,9 +42,11 @@ Original series remain copyright / licence of their authors and of NOAA WDS Pale
 
 ## Still missing (no public time series, or wrong geography)
 
+- Fenland yew/oak annual δ18O–δ13C file (Bebchuk; span marked only)
+- Swansea / UK Oak Project 7000-year oak δ18O master (not released)
 - Irish bog-oak annual head-count / mean-age curve
 - A southern England / Somerset Levels peat stack
-- Other Temperature 12k pollen sites as extra thermometers
+- SCOT2K Scottish pine temperature (last ~800 years only — wrong window)
 - Lochnagar (held back: 788 m, almost no points in-window)
 
 See `CITATIONS.md`.

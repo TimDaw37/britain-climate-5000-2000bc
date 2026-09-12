@@ -25,7 +25,7 @@ All series plotted on this site were downloaded from public palaeoclimate archiv
 
 7. Mauri, A., Davis, B.A.S., Collins, P.M. and Kaplan, J.O. (2015). The climate of Europe during the Holocene: a gridded pollen-based reconstruction and its multi-proxy evaluation. *Quaternary Science Reviews* 112, 109–127. https://doi.org/10.1016/j.quascirev.2015.01.013  
    Data: NOAA WDS Paleoclimatology study 18317, EPOCH-2 GeoTIFFs at 51°N, 2°W. https://doi.org/10.25921/gkkq-b461  
-   Used for the Stonehenge headline. Anomalies added to Boscombe Down 1971–2000 means (Met Office). Annual precipitation GeoTIFF not used; seasonal mm day⁻¹ fields only.
+   Used for the Stonehenge headline (v0.2). Anomalies added to Boscombe Down 1971–2000 means (Met Office). Annual precipitation GeoTIFF not used; seasonal mm day⁻¹ fields only.
 
 8. Langdon, P.G., Barber, K.E. and Lomas-Clarke, S.H. (2004). Reconstructing climate and environmental change in northern England through chironomid and pollen analyses: evidence from Talkin Tarn, Cumbria. *Journal of Paleolimnology* 32, 197–213. https://doi.org/10.1023/B:JOPL.0000029433.85764.a5  
    Data: Temperature 12k / NOAA TalkinTarn.Langdon.2004
@@ -34,10 +34,19 @@ All series plotted on this site were downloaded from public palaeoclimate archiv
    Data: Temperature 12k / NOAA BiglandTarn.Barber.2013
 
 10. Taylor, K.J., McGinley, S., Potito, A.P., Molloy, K. and Beilman, D.W. (2018). A mid to late Holocene chironomid-inferred temperature record from northwest Ireland. *Palaeogeography, Palaeoclimatology, Palaeoecology* 505, 274–286. https://doi.org/10.1016/j.palaeo.2018.06.006  
-   Data: Temperature 12k / NOAA LoughMeenachrinna.Taylor.2018
+    Data: Temperature 12k / NOAA LoughMeenachrinna.Taylor.2018
 
 11. Leuschner, H.H., Sass-Klaassen, U., Jansma, E., Baillie, M.G.L. and Spurk, M. (2002). Subfossil European bog oaks: population dynamics and long-term growth depressions. *The Holocene* 12, 695–706. https://doi.org/10.1191/0959683602hl584rp  
     Events only (no public annual-count file): generation changes ~4000, ~2500 and ~2000 BC.
+
+12. Boswijk, G. (2002). NOAA/WDS Paleoclimatology — Boswijk — Thorne Moors TM01 T24 — QUSP — ITRDB BRIT036. NOAA NCEI. https://doi.org/10.25921/ka3y-zn55  
+    Site oak ring-width chronology, 5726–4966 cal yr BP (3776–3016 BC). Plotted as 5-year means. Hydrology / stand conditions, not temperature.
+
+13. Bebchuk, T. et al. (2026). An absolutely dated mid-Holocene English yew chronology. *The Holocene*. https://doi.org/10.1177/09596836251407634  
+    Yew TRW absolutely dated 2668–2213 BC. Annual climate file not public; span marked on the viewer.
+
+14. Bebchuk, T. et al. (2025). Tree-ring stable isotopes reveal a hydroclimate shift in eastern England around 4.2 ka ago. *Geophysical Research Letters* 52, e2024GL114313. https://doi.org/10.1029/2024GL114313  
+    Hydroclimate in two blocks ~3274–2863 and ~2662–2245 BC. Yew disappearance ~4200 cal BP attributed to relative sea-level rise, flooding and a wet/negative-NAO phase.
 
 ## Discussed, not plotted
 
